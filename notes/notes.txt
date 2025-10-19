@@ -1,0 +1,17 @@
+
+
+
+
+
+episode 2-
+Git and Github are two diffrent things;
+2 types of dependencies-
+1.Dev dependency
+dev dependency are used in development phase.
+2.Normal dependency
+normal dependencies are also used in production.
+
+when we install any dependency into our project it can have its own dependencies which are also installed along with it and those dependencies might also have their on dependencies and so on...this is known as transitive dependency
+
+
+
