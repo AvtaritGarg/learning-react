@@ -26,7 +26,6 @@ ul {
     width: 260px;
     display: flex;
     flex-direction: column;
-    border: 1px black solid;
     border-radius: 3%;
     margin-top: 20px;
 }
@@ -57,4 +56,8 @@ ul {
 .resText{
     padding-right: 1px;
     padding-left: 10px;
+}
+
+.res-card:hover {
+    border: 2px black solid;
 }

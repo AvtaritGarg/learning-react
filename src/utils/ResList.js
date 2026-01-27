@@ -1,15 +1,4 @@
-const resList = {
-	"data": {
-		"statusMessage": "done successfully",
-		"pageOffset": {
-			"nextOffset": "CJpqEJtYKIDY99KA18rfNDDIDjgD",
-			"widgetOffset": {
-				"restaurantCountWidget": "",
-				"inlineFacetFilter": "",
-				"collectionV5RestaurantListWidget_SimRestoRelevance_food": "8",
-				"collectionV5MastheadWidget": ""
-			}
-		},
+const resList = [{
 		"cards": [
 			{
 				"card": {
@@ -1702,13 +1691,6 @@ const resList = {
                 }
             }
 		],
-		"firstOffsetRequest": true,
-		"nextFetch": 3
-	},
-	"tid": "e45dd066-9af7-4866-bb1a-777a60088d40",
-	"sid": "oj5dca84-d223-4302-b274-7aec09a32953",
-	"deviceId": "aef1d562-744a-3189-3c86-45b42356bcd3",
-	"csrfToken": "MPMW5Lyvadrs-R9FIzIUJ918I-y2A-4HW9Z0M6UQ"
-}
+}]
 
 export default resList

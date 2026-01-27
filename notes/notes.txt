@@ -25,7 +25,7 @@ we can use index but it is bad practice. understand from below :
 not using key(not acceptable) <<<< using index as key (bad practice) <<<<<<< using unique id(best practice)
  
 
-
+State variable: whenever a state variable updates, react re-renders this component
 
 
 
@@ -902,6 +902,33 @@ not using key(not acceptable) <<<< using index as key (bad practice) <<<<<<< usi
 	"deviceId": "aef1d562-744a-3189-3c86-45b42356bcd3",
 	"csrfToken": "MPMW5Lyvadrs-R9FIzIUJ918I-y2A-4HW9Z0M6UQ"
 }
-
+[{
+						"id": "420472",
+						"name": "Biryani Blues",
+						"cloudinaryImageId": "97377e54937c079fe269d744aa66274a",
+						"costForTwo": "₹400 for two",
+						"cuisines": [
+							"Biryani",
+							"Hyderabadi",
+							"Lucknowi",
+							"Kebabs"
+							],
+						"avgRating": 4.4,
+                        "deliveryTime": 39
+                        },
+                        {
+                            "id": "420473",
+                            "name": "KFC",
+                            "cloudinaryImageId": "97377e54937c079fe269d744aa66274a",
+                            "costForTwo": "₹400 for two",
+                            "cuisines": [
+                                "Biryani",
+                                "Hyderabadi",
+                                "Lucknowi",
+                                "Kebabs"
+                                ],
+                            "avgRating": 3.9,
+                            "deliveryTime": 39
+                            }]
 
 
