@@ -1,4 +1,3 @@
-import resList from "../utils/ResList";
 import {CDN_URL} from "../utils/constants"
 
 const RestaurantCard = (props)=>{
@@ -19,7 +18,7 @@ const RestaurantCard = (props)=>{
                         {resData.avgRating} ⭐️
                     </h3>
                     <h3>
-                        {resData.deliveryTime} minutes
+                        {resData.sla.deliveryTime} minutes
                     </h3>
                 </div>
 

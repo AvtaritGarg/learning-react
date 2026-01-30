@@ -25,11 +25,14 @@ we can use index but it is bad practice. understand from below :
 not using key(not acceptable) <<<< using index as key (bad practice) <<<<<<< using unique id(best practice)
  
 
-State variable: whenever a state variable updates, react re-renders this component
+State variable: whenever a state variable updates, react re-renders this component(reconciliation cycle is triggered)
 
 
 
+Seperation of concerns OR Single responsibility principle : 
 
+when we make different project for each and every microservice required(for example backend, ui, authentication, DB, Sms sending, etc).
+Each and every service has its own job.
 
 
 

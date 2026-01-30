@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
+    border: 2px black solid;
 }
 .body {
     display: flex;
@@ -15,12 +16,15 @@ ul {
 }
 
 .nav-items {
-    padding  :20px;
+    margin-left: 20px;
+    margin-right: 10px;
     list-style: none;
-    padding-top: 30px;
     font-size: 26px;
 }
-
+.navbar {
+    margin-top: 35px;
+    
+}
 .res-card {
     background-color: #f0f0f0;
     width: 260px;
@@ -60,4 +64,33 @@ ul {
 
 .res-card:hover {
     border: 2px black solid;
+}
+
+
+.shimmer-card {
+    background-color: #f0f0f0;
+    height: 420px;
+    width: 260px;
+    border-radius: 3%;
+
+    margin-top: 20px;
+}
+.shimmer-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 100px;
+}
+
+.search {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.nav-text {
+    margin-top: 5px;
+}
+.btn-login {
+    width: 100px;
 }
