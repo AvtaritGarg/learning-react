@@ -6,7 +6,7 @@ import Shimmer from "./shimmer"
 
 const Body = ()=> {
 
-    let originalList = []
+    const [originalList, setOriginalList] = useState([])
 
     const[listOfRestaurants, setlistOfRestaurants] = useState([])
 
@@ -21,7 +21,7 @@ const Body = ()=> {
         const json = await data.json();
         console.log(json);
         setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        originalList = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        setOriginalList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
 
     if(listOfRestaurants.length === 0){
@@ -54,8 +54,7 @@ const Body = ()=> {
                 setSearchText(e.target.value)
             }}></input>
             <button className="searchBtn" onClick={()=>{
-                const searchedList = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()))
-                console.log(originalList)
+                const searchedList = originalList.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()))
                 setlistOfRestaurants(searchedList)
             }}>Search</button>
             </div>

@@ -34,7 +34,7 @@ Seperation of concerns OR Single responsibility principle :
 when we make different project for each and every microservice required(for example backend, ui, authentication, DB, Sms sending, etc).
 Each and every service has its own job.
 
-
+never create state variables in a condition(if/else)
 
 {	"statusCode": 0,
 	"data": {
