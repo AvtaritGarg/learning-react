@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard"
+import RestaurantCard, { withOpenLabel } from "./RestaurantCard"
 import { useEffect, useState} from "react"
 import Shimmer from "./shimmer"
 import useOnlineStatus from "../utils/useOnlineStatus"
@@ -15,6 +15,8 @@ const Body = ()=> {
 
     const onlineStatus = useOnlineStatus();
 
+    const RestaurantOpen = withOpenLabel(RestaurantCard)
+
     useEffect(() => {
         fetchdata();
     }, [])
@@ -27,16 +29,16 @@ const Body = ()=> {
         setOriginalList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
 
-    if(listOfRestaurants.length === 0){
-        return <Shimmer />
-    }
-
-
     if (onlineStatus === false) return (
         <h1>
             Looks like you're offline, please check your internet connection.
         </h1>
     )
+
+    if(listOfRestaurants.length === 0){
+        return <Shimmer />
+    }
+
         
     return(
 
@@ -47,15 +49,16 @@ const Body = ()=> {
             </div>
             <div className="flex flex-wrap justify-evenly">
 
-                {listOfRestaurants.map((restaurant) => (
-                    <RestaurantCard key = {restaurant.info.id} resData = {restaurant.info} />
+                {listOfRestaurants.map((restaurant) =>
+                    (
+                    restaurant?.info?.isOpen ?(<RestaurantOpen key = {restaurant?.info?.id} resData = {restaurant?.info}/>) : (<RestaurantCard key = {restaurant?.info?.id} resData = {restaurant?.info} /> )
                 ))}
 
             </div>
         </div>
         <div className="rightBody">
             <div className="search">
-            <button className="filterBtn ori orm oro ort orx orz osb ose osg osi" onClick={() => {
+            <button className="filterBtn" onClick={() => {
                 const filteredList = listOfRestaurants.filter((res) => res.info.avgRating>4);
                 setlistOfRestaurants(filteredList)
             }
