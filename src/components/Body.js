@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard"
 import { useEffect, useState} from "react"
 import Shimmer from "./shimmer"
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 
 
@@ -11,6 +12,8 @@ const Body = ()=> {
     const[listOfRestaurants, setlistOfRestaurants] = useState([])
 
     const [searchText, setSearchText] = useState("");
+
+    const onlineStatus = useOnlineStatus();
 
     useEffect(() => {
         fetchdata();
@@ -28,14 +31,21 @@ const Body = ()=> {
         return <Shimmer />
     }
 
+
+    if (onlineStatus === false) return (
+        <h1>
+            Looks like you're offline, please check your internet connection.
+        </h1>
+    )
+        
     return(
 
-    <div className="body">
+    <div className="flex body">
         <div className="leftBody">
             <div className="cityName">
                 <h1>Gautam Buddh Nagar</h1>
             </div>
-            <div className="res-cards">
+            <div className="flex flex-wrap justify-evenly">
 
                 {listOfRestaurants.map((restaurant) => (
                     <RestaurantCard key = {restaurant.info.id} resData = {restaurant.info} />
@@ -45,7 +55,7 @@ const Body = ()=> {
         </div>
         <div className="rightBody">
             <div className="search">
-            <button className="filterBtn" onClick={() => {
+            <button className="filterBtn ori orm oro ort orx orz osb ose osg osi" onClick={() => {
                 const filteredList = listOfRestaurants.filter((res) => res.info.avgRating>4);
                 setlistOfRestaurants(filteredList)
             }

@@ -17,4 +17,4 @@ const useOnlineStatus = () => {
 
 }
 
-export default useOnlineStatus
+export default useOnlineStatus;
